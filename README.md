@@ -3,47 +3,46 @@ My dynamic 42 libft toolbox - C
 
 ![Cluster](https://github.com/MaloP47/MaloP47/blob/main/images/42bis.jpg)
 
-
 ## Introduction
 
-- **Objectif**: [Décrivez l'objectif principal de votre projet]
-- **Importance**: [Expliquez pourquoi ce projet est important ou unique]
+- **Objective**: [Describe the main objective of your project]
+- **Importance**: [Explain why this project is important or unique]
 
-## Historique et Évolution
+## History and Evolution
 
-- **Date de Commencement**: [Date]
+- **Start Date**: [Date]
 - **Milestones**:
-  - [Étape 1]
-  - [Étape 2]
-- **Défis et Solutions**: [Décrivez les défis et comment vous les avez surmontés]
-- **Adaptations**: [Parlez des changements majeurs ou des pivots]
+  - [Stage 1]
+  - [Stage 2]
+- **Challenges and Solutions**: [Describe the challenges and how you overcame them]
+- **Adaptations**: [Discuss major changes or pivots]
 
-## Caractéristiques Uniques et Points Forts
+## Unique Features and Strengths
 
-- [Caractéristique 1]
-- [Caractéristique 2]
+- [Feature 1]
+- [Feature 2]
 
-## Statut Actuel
+## Current Status
 
-- **État**: [État actuel du projet]
-- **Travaux en Cours**: [Ce que vous travaillez actuellement]
-- **Feedbacks**: [Les retours que vous avez reçus]
+- **State**: [Current state of the project]
+- **Work in Progress**: [What you are currently working on]
+- **Feedback**: [The feedback you have received]
 
-## Futur du Projet
+## Future of the Project
 
-- **Plans**: [Ce que vous envisagez pour le futur]
-- **Prochaines Étapes**: [Les fonctionnalités ou aspects prévus]
+- **Plans**: [What you envision for the future]
+- **Next Steps**: [Planned features or aspects]
 
-## Réflexions Personnelles
+## Personal Reflections
 
-- **Apprentissages**: [Ce que vous avez appris]
-- **Compétences**: [Les compétences développées]
-- **Impact**: [Impact sur votre croissance personnelle ou professionnelle]
+- **Learnings**: [What you have learned]
+- **Skills**: [Skills you've developed or honed]
+- **Impact**: [Impact on your personal or professional growth]
 
-## Invitation à la Collaboration ou Feedback
+## Invitation to Collaborate or Provide Feedback
 
-- [Comment les autres peuvent vous contacter ou collaborer]
+- [How others can contact you or collaborate]
 
 ## Conclusion
 
-[Un résumé rapide de l'évolution du projet et une note finale sur votre vision ou espoir pour l'avenir du projet]
+[A brief summary of the project's evolution and a final note on your vision or hope for the future of the project]
