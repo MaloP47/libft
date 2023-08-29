@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:57:06 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/08/29 12:00:04 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/08/29 13:40:22 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ static char	*update_static_str(t_gnl *gnl)
 	if (!gnl->str[i])
 	{
 		free(gnl->str);
+		gnl->str = 0;
 		return (NULL);
 	}
 	gnl->temp = malloc(sizeof(char) * ((ft_strlen(gnl->str) - i) + 1));
@@ -134,26 +135,6 @@ static char	*update_static_str(t_gnl *gnl)
 
 /* Main function */
 
-/*char	*gnl(int fd)
-{
-	static t_gnl	gnl;
-	char			*lineread;
-
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
-	gnl.str = read_and_add_to_static_str(&gnl, fd);
-	if (!gnl.str)
-		return (NULL);
-	lineread = extract_to_line(&gnl);
-	if (fd == 0 && ft_strcmp(lineread, "exit\n") == 0)
-	{
-		free(gnl.str);
-		return (lineread);
-	}
-	gnl.str = update_static_str(&gnl);
-	return (lineread);
-}*/
-
 char	*gnl(int fd)
 {
 	static t_gnl	gnl;
@@ -162,8 +143,11 @@ char	*gnl(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	gnl.str = read_and_add_to_static_str(&gnl, fd);
-	if (!gnl.str)
+	if (gnl.str == 0)
+	{
+		free(gnl.str);
 		return (NULL);
+	}
 	lineread = extract_to_line(&gnl);
 	gnl.str = update_static_str(&gnl);
 	return (lineread);
