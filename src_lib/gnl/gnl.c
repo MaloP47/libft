@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:57:06 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/08/29 11:57:06 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/08/29 12:00:04 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,5 @@ char	*gnl(int fd)
 		return (NULL);
 	lineread = extract_to_line(&gnl);
 	gnl.str = update_static_str(&gnl);
-	if (fd == 0)
-		free(gnl.str);
 	return (lineread);
 }
