@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:57:06 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/08/29 13:40:22 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/08/29 13:57:35 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,13 +135,18 @@ static char	*update_static_str(t_gnl *gnl)
 
 /* Main function */
 
-char	*gnl(int fd)
+char	*gnl(int fd, int clear)
 {
 	static t_gnl	gnl;
 	char			*lineread;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
+	if (clear)
+	{
+		free(gnl.str);
+		return (0);
+	}
 	gnl.str = read_and_add_to_static_str(&gnl, fd);
 	if (gnl.str == 0)
 	{
