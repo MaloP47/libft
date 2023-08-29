@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:42:18 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/06/05 12:06:20 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/08/29 13:14:50 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,6 @@ char	*get_next_line_bonus(int fd)
 	if (!text_read[fd])
 		return (NULL);
 	line = extract_to_line_bonus(text_read[fd]);
-	text_read[fd] = update_static_str_bonus(text_read[fd]);
+	//text_read[fd] = update_static_str_bonus(text_read[fd]);
 	return (line);
 }
