@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:57:06 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/07/26 10:43:36 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/08/29 11:46:55 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ static char	*update_static_str(t_gnl *gnl)
 
 /* Main function */
 
-char	*gnl(int fd)
+/*char	*gnl(int fd)
 {
 	static t_gnl	gnl;
 	char			*lineread;
@@ -146,6 +146,26 @@ char	*gnl(int fd)
 		return (NULL);
 	lineread = extract_to_line(&gnl);
 	if (fd == 0 && ft_strcmp(lineread, "exit\n") == 0)
+	{
+		free(gnl.str);
+		return (lineread);
+	}
+	gnl.str = update_static_str(&gnl);
+	return (lineread);
+}*/
+
+char	*gnl(int fd)
+{
+	static t_gnl	gnl;
+	char			*lineread;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	gnl.str = read_and_add_to_static_str(&gnl, fd);
+	if (!gnl.str)
+		return (NULL);
+	lineread = extract_to_line(&gnl);
+	if (fd == 0)
 	{
 		free(gnl.str);
 		return (lineread);
