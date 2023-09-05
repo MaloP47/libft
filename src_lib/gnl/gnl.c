@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:57:06 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/08/29 13:57:35 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/09/05 14:51:09 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,3 +157,122 @@ char	*gnl(int fd, int clear)
 	gnl.str = update_static_str(&gnl);
 	return (lineread);
 }
+
+/*#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 42
+#endif
+
+int	strlen_gnl(char *s)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
+}
+
+int	strchr_gnl(char *s, char x)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+	{
+		if (s[i] == x)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+void	*calloc_gnl(int size)
+{
+	char	*new;
+	int		i;
+
+	new = malloc(size);
+	if (!new)
+		return (NULL);
+	i = -1;
+	while (++i < size)
+		new[i] = 0;
+	return (new);
+}
+
+char	*join_gnl(char *s1, char *s2)
+{
+	int		i;
+	int		j;
+	char 	*join;
+
+	if (!s1)
+		s1 = calloc_gnl(1);
+	join = malloc(strlen_gnl(s1) + strlen_gnl(s2) + 1);
+	if (!join)
+		return (free(s1), NULL);
+	i = -1;
+	j = -1;
+	while (s1[++i])
+		join[i] = s1[i];
+	while (s2[++j])
+		join[i + j] = s2[j];
+	join[i + j] = 0;
+	free(s1);
+	return(join);
+}
+
+void	clean_gnl(char *line, char *buffer)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (line[i] && line[i] != 10)
+		i++;
+	if (line[i] == 10)
+		i++;
+	while (line[i])
+	{
+		buffer[j] = line[i];
+		line[i] = 0;
+		i++;
+		j++;
+	}
+	buffer[j] = 0;
+}
+
+char	*get_next_line(int fd)
+{
+	static char	buffer[BUFFER_SIZE + 1];
+	char		*line;
+	int			byte_read;
+
+	if (fd < 0 || BUFFER_SIZE < 1)
+		return (NULL);
+	line = 0;
+	line = join_gnl(line, buffer);
+	byte_read = 1;
+	while (byte_read > 0 && !strchr_gnl(line, 10))
+	{
+		byte_read = read(fd, buffer, BUFFER_SIZE);
+		if (byte_read < 0)
+			return(free(line), NULL);
+		buffer[byte_read] = 0;
+		line = join_gnl(line, buffer);
+	}
+	if (!line[0])
+		return(free(line), NULL);
+	else
+		clean_gnl(line, buffer);
+	return (line);
+}*/
