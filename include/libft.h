@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:50:51 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/08/29 13:57:57 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/10/02 14:47:01 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	print_bits(unsigned char octet);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 char	*gnl(int fd, int clear);
 char	*get_next_line_bonus(int fd);
+char	*get_next_line(int fd);
 
 /*is*/
 

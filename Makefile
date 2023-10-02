@@ -6,7 +6,7 @@
 #    By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 16:38:07 by mpeulet           #+#    #+#              #
-#    Updated: 2023/08/10 16:25:59 by mpeulet          ###   ########.fr        #
+#    Updated: 2023/10/02 14:46:21 by mpeulet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ BITS_DIR		= bits/
 BITS_FUNCTIONS	= print_bits
 
 GNL_DIR			= gnl/
-GNL_FUNCTIONS	= gnl get_next_line_bonus
+GNL_FUNCTIONS	= gnl get_next_line_bonus get_next_line
 
 IS_DIR			= is/
 IS_FUNCTIONS	= ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint ft_iswhitespace \
