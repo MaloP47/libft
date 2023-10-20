@@ -6,7 +6,7 @@
 #    By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 16:38:07 by mpeulet           #+#    #+#              #
-#    Updated: 2023/10/02 14:46:21 by mpeulet          ###   ########.fr        #
+#    Updated: 2023/10/20 14:31:56 by mpeulet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ OTH_DIR			= other/
 OTH_FUNCTIONS	= ft_swap
 
 PF_DIR			= printf/
-PF_FUNCTIONS	= ft_printf ft_printf_c_s_d_i_u ft_printf_p_x_X
+PF_FUNCTIONS	= ft_printf ft_printf_c_s_d_i_u ft_printf_p_x_X ft_printf_fd
 
 PUT_DIR			= put/
 PUT_FUNCTIONS	= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_putchar_stdout \

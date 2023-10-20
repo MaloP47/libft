@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:50:51 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/10/02 14:47:01 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/10/20 14:26:50 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,10 @@ void	print_ptr(unsigned long p, t_pff *tab);
 int		ft_put_ptr_printf(t_pff *tab);
 void	print_hex(unsigned int h, t_pff *tab, char c);
 int		ft_put_hex_printf(t_pff *tab, char c);
+
+/* *** ft_printf_fd *** */
+
+
 
 /****************************************************************/
 
