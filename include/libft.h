@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:50:51 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/10/20 14:56:24 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/10/20 14:59:36 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ void	*ft_memset(void *s, int c, size_t n);
 /* other */
 
 void	ft_swap(int *a, int *b);
+void	free_tab(char **tab);
 
 /*pf*/
 
