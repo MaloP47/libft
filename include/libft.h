@@ -6,7 +6,7 @@
 /*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:50:51 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/10/20 14:26:50 by mpeulet          ###   ########.fr       */
+/*   Updated: 2023/10/20 14:56:24 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,11 @@ int		ft_put_hex_printf(t_pff *tab, char c);
 
 /* *** ft_printf_fd *** */
 
-
+int		putchar_pf(char c, int fd);
+int		putstr_pf(char *s, int fd);
+int		putnbr_pf(int nb, int *count, int fd);
+int		print_conversion(va_list *args, const char *s, int i, int fd);
+int		ft_printf_fd(int fd, const char *s, ...);
 
 /****************************************************************/
 
