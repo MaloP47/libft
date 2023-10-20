@@ -6,7 +6,7 @@
 #    By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 16:38:07 by mpeulet           #+#    #+#              #
-#    Updated: 2023/10/20 14:31:56 by mpeulet          ###   ########.fr        #
+#    Updated: 2023/10/20 15:52:45 by mpeulet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ MEM_DIR			= mem/
 MEM_FUNCTIONS	= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memmove ft_memset ft_memcpy
 
 OTH_DIR			= other/
-OTH_FUNCTIONS	= ft_swap
+OTH_FUNCTIONS	= ft_swap free_tab
 
 PF_DIR			= printf/
 PF_FUNCTIONS	= ft_printf ft_printf_c_s_d_i_u ft_printf_p_x_X ft_printf_fd
