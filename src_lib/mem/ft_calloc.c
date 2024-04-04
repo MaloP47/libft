@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeulet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mpeulet <mpeulet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:28:03 by mpeulet           #+#    #+#             */
-/*   Updated: 2023/03/27 13:17:16 by mpeulet          ###   ########.fr       */
+/*   Updated: 2024/04/04 17:39:25 by mpeulet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	*ft_calloc(size_t nb, size_t size)
 {
 	void	*ptr;
 
-	if (nb >= SIZE_MAX || size >= SIZE_MAX)
-		return (NULL);
+	if (nb && size > SIZE_MAX / nb)
+        return (NULL);
 	ptr = (void *)malloc(nb * size);
 	if (!ptr)
 		return (NULL);
